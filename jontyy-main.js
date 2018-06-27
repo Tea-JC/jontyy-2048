@@ -81,6 +81,6 @@ function generateOneNumber() {
     showNumberWithAnimotion(rendx, rendy, rendNumber);
 }
 
-$("#newGameButton").click(function() {
+$("#newGameButton").click(function () {
     newGame();
 })

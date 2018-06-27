@@ -96,6 +96,7 @@ function canMoveUp(border) {
     }
     return false;
 }
+
 function canMoveDown(border) {
     for (var j = 0; j != 4; j++) {
         for (var i = 2; i != -1; i--) {
@@ -108,6 +109,7 @@ function canMoveDown(border) {
     }
     return false;
 }
+
 function noBlockHorization(row, col1, col2, border) {
     for (var i = col1 + 1; i != col2; i++) {
         if (border[row][i] != 0) {
@@ -116,6 +118,7 @@ function noBlockHorization(row, col1, col2, border) {
     }
     return true;
 }
+
 function noBlockHorization2(col, col1, col2, border) {
     for (var i = col1 + 1; i != col2; i++) {
         if (border[i][col] != 0) {
@@ -124,6 +127,7 @@ function noBlockHorization2(col, col1, col2, border) {
     }
     return true;
 }
+
 function isGameOver() {
     if (!canMoveLeft(border) && (!canMoveRight(border)) && !canMoveUp(border) && !canMoveDown(border)) {
         alert("gameOver" + " and you score is " + score);
@@ -134,7 +138,3 @@ function isGameOver() {
 function updateScore(score) {
     $("#score").html(score);
 }
-// function reset() {
-//     $(".number-cell").remove();
-//     newGame();
-// }

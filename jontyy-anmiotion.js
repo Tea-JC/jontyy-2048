@@ -15,7 +15,7 @@ function showMoveAnimation(fromx, fromy, tox, toy) {
     // 获取当前数据
     var numberCell = $("#number-cell-" + fromx + "-" + fromy);
     numberCell.animate({
-        top : getPostTop(tox, toy),
-        left : getPostLeft(tox, toy)
+        top: getPostTop(tox, toy),
+        left: getPostLeft(tox, toy)
     }, 200);
 }

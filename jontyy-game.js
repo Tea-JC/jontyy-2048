@@ -55,13 +55,13 @@ function moveLeft() {
                         border[i][k] += border[i][j];
                         score += border[i][j];
                         border[i][j] = 0;
-                        updateScore(score); 
+                        updateScore(score);
                     }
                 }
             }
         }
     }
-    
+
     setTimeout("updateBorderView()", 200);
     return true;
 }
@@ -88,7 +88,7 @@ function moveRight() {
                         border[i][k] += border[i][j];
                         score += border[i][j];
                         border[i][j] = 0;
-                        updateScore(score); 
+                        updateScore(score);
                     }
                 }
             }
@@ -119,7 +119,7 @@ function moveUp() {
                         border[k][j] += border[i][j];
                         score += border[i][j];
                         border[i][j] = 0;
-                        updateScore(score); 
+                        updateScore(score);
                     }
                 }
             }
@@ -150,7 +150,7 @@ function moveDown() {
                         border[k][j] += border[i][j];
                         score += border[i][j];
                         border[i][j] = 0;
-                        updateScore(score); 
+                        updateScore(score);
                     }
                 }
             }
