@@ -11,8 +11,10 @@ function newGame() {
 }
 
 var border = new Array();
+var score = 0;
 
 function init() {
+    updateScore(score);
     for (var i = 0; i != 4; i++) {
         // 定义了一个二维数组
         border[i] = new Array();
@@ -30,7 +32,7 @@ function init() {
 }
 
 function updateBorderView() {
-     $(".number-cell").remove();
+    $(".number-cell").remove();
     for (var i = 0; i != 4; i++) {
         for (var j = 0; j != 4; j++) {
             $("#grid-continer").append("<div class = 'number-cell' id = 'number-cell-" + i + "-" + j + "'></div>");
@@ -78,3 +80,7 @@ function generateOneNumber() {
     // 实现随机数字产生的动画
     showNumberWithAnimotion(rendx, rendy, rendNumber);
 }
+
+$("#newGameButton").click(function() {
+    newGame();
+})

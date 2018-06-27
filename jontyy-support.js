@@ -96,7 +96,18 @@ function canMoveUp(border) {
     }
     return false;
 }
-
+function canMoveDown(border) {
+    for (var j = 0; j != 4; j++) {
+        for (var i = 2; i != -1; i--) {
+            if (border[i][j] != 0) {
+                if (border[i + 1][j] == 0 || border[i + 1][j] == border[i][j]) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
 function noBlockHorization(row, col1, col2, border) {
     for (var i = col1 + 1; i != col2; i++) {
         if (border[row][i] != 0) {
@@ -105,3 +116,25 @@ function noBlockHorization(row, col1, col2, border) {
     }
     return true;
 }
+function noBlockHorization2(col, col1, col2, border) {
+    for (var i = col1 + 1; i != col2; i++) {
+        if (border[i][col] != 0) {
+            return false;
+        }
+    }
+    return true;
+}
+function isGameOver() {
+    if (!canMoveLeft(border) && (!canMoveRight(border)) && !canMoveUp(border) && !canMoveDown(border)) {
+        alert("gameOver" + " and you score is " + score);
+        return true;
+    }
+}
+
+function updateScore(score) {
+    $("#score").html(score);
+}
+// function reset() {
+//     $(".number-cell").remove();
+//     newGame();
+// }
