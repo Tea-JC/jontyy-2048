@@ -3,6 +3,8 @@ $(function () {
 });
 
 function newGame() {
+    score = 0;
+    updateScore(score);
     // 初始化棋盘格和数字格
     init();
     // 在随机位置的两个格子生成随机数字
