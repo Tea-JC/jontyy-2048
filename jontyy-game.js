@@ -7,28 +7,32 @@ $(document).keydown(function (event) {
             event.preventDefault();
             if (moveLeft()) {
                 generateOneNumber();
-                isGameOver();
+                setTimeout("isGameOver()", 300);
+                // isGameOver();
             }
             break;
         case 38:
             event.preventDefault();
             if (moveUp()) {
                 generateOneNumber();
-                isGameOver();
+                // isGameOver();
+                setTimeout("isGameOver()", 300);
             }
             break;
         case 39:
             event.preventDefault();
             if (moveRight()) {
                 generateOneNumber();
-                isGameOver();
+                // isGameOver();
+                setTimeout("isGameOver()", 300);
             }
             break;
         case 40:
             event.preventDefault();
             if (moveDown()) {
                 generateOneNumber();
-                isGameOver();
+                // isGameOver();
+                setTimeout("isGameOver()", 300);
             }
             break;
     }

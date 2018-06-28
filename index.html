@@ -35,7 +35,31 @@
         <div id="grid-cell-3-2" class="grid-cell"></div>
         <div id="grid-cell-3-3" class="grid-cell"></div>
     </div>
+    <div id="final">
+    </div>
     <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./template-web.js"></script>
+    <script id="test" src="./jontyy-modle.js" type="text/html">
+        {{if isAdmin}}
+        <ul id="rank">
+            {{each score value i}}
+            <li class="score_list">
+                <span class="score_num">
+                    No.{{i+1}}
+                </span>
+                <span class="score_name">
+                    {{value[0]}}
+                </span>
+                <span class="score_data">
+                    {{value[1]}}
+                </span>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </script>
+    <script src="./jontyy-score.js">
+    </script>
     <script src="./jontyy-main.js"></script>
     <script src="./jontyy-support.js"></script>
     <script src="./jontyy-game.js"></script>

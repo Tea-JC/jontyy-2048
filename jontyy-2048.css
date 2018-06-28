@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 header {
     display: block;
     margin: 0 auto;
@@ -21,6 +25,7 @@ header #newGameButton {
     color: white;
     border-radius: 10px;
     text-decoration: none;
+    cursor: pointer;
 }
 
 header #newGameButton:hover {
@@ -59,4 +64,38 @@ header p {
     line-height: 100px;
     text-align: center;
     position: absolute;
+}
+#final {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    height: 600px;
+    background:#bbada0;
+}
+.score_list{
+    height: 30px;
+    width: 270px;
+    line-height: 30px;
+    font-size: 16px;
+    padding:15px;
+    text-align: center;
+    list-style: none;
+}
+.score_num {
+    background: rgb(242, 177, 121);
+    display: inline-block;
+    width: 20%;
+}
+.score_name{
+    display: inline-block;
+    width: 40%;
+    background:rgb(238, 228, 218);
+    height: 100%;
+}
+.score_data {
+    display: inline-block;
+    width: 35%;
+    height: 100%;
+    background: rgb(237, 224, 200);
 }

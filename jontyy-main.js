@@ -24,6 +24,7 @@ function init() {
             // 初始化小格子的值为零
             border[i][j] = 0;
             var gridCell = $("#grid-cell-" + i + "-" + j);
+            // var gridCell = document.getElementById("grid-ceil-" + i + "-" +j);
             // 通过getPostTop设置每个格子距离顶部的值
             gridCell.css("top", getPostTop(i, j));
             // 通过getPostLeft设置每个格子距离左边的值
