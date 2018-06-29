@@ -41,6 +41,7 @@
     <script src="./template-web.js"></script>
     <script id="test" src="./jontyy-modle.js" type="text/html">
         {{if isAdmin}}
+        <!-- {{if score}} -->
         <ul id="rank">
             {{each score value i}}
             <li class="score_list">
@@ -48,19 +49,21 @@
                     No.{{i+1}}
                 </span>
                 <span class="score_name">
-                    {{value[0]}}
+                    {{value.name}}
                 </span>
                 <span class="score_data">
-                    {{value[1]}}
+                    {{value.score}}
                 </span>
             </li>
             {{/each}}
+
         </ul>
+        <!-- {{/if}} -->
         {{/if}}
     </script>
-    <script src="./jontyy-score.js">
-    </script>
+    <script src="./jontyy-text.js"></script>
     <script src="./jontyy-main.js"></script>
+    <script src="./jontyy-score.js"></script>
     <script src="./jontyy-support.js"></script>
     <script src="./jontyy-game.js"></script>
     <script src="./jontyy-anmiotion.js"></script>

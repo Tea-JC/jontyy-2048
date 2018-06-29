@@ -138,3 +138,21 @@ function isGameOver() {
 function updateScore(score) {
     $("#score").html(score);
 }
+
+function pushNew(){
+        var newUser = {"score":score,"name":username};
+        grade = JSON.parse(storge.getItem('list')) || [];
+        grade.unshift(newUser);
+        grade.sort(sortId);
+        if (grade.length > 10) {
+            grade.shift();
+        } 
+        
+        storge.removeItem("list");
+        storge.setItem("list",  JSON.stringify(grade));
+}
+    
+
+function sortId(a, b) {
+    return b.score - a.score
+}

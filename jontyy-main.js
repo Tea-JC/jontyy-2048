@@ -3,6 +3,14 @@ $(function () {
 });
 
 function newGame() {
+    username = mytrim(prompt("Enter you name"));
+    // username =prompt("Enter you name");
+    console.log(JSON.parse(storge.getItem('list')))
+    if(!myRepeat(JSON.parse(storge.getItem('list')), username)) {
+        alert("用户名已经存在");
+        newGame();
+    }
+    console.log(username)
     score = 0;
     updateScore(score);
     // 初始化棋盘格和数字格
@@ -11,9 +19,12 @@ function newGame() {
     generateOneNumber();
     generateOneNumber();
 }
-
+// var ifDone = false;
+var username;
 var border = new Array();
 var score = 0;
+var grade = [];
+var storge = window.localStorage;
 
 function init() {
     updateScore(score);
@@ -32,6 +43,7 @@ function init() {
         }
     }
     updateBorderView();
+    run();
 }
 
 function updateBorderView() {
@@ -85,5 +97,5 @@ function generateOneNumber() {
 }
 
 $("#newGameButton").click(function () {
-    newGame();
+    window.location.reload();
 })

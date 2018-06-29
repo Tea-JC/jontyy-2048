@@ -7,32 +7,36 @@ $(document).keydown(function (event) {
             event.preventDefault();
             if (moveLeft()) {
                 generateOneNumber();
-                setTimeout("isGameOver()", 300);
-                // isGameOver();
+                if(isGameOver()){
+                    pushNew();
+                }
             }
             break;
         case 38:
             event.preventDefault();
             if (moveUp()) {
                 generateOneNumber();
-                // isGameOver();
-                setTimeout("isGameOver()", 300);
+                if(isGameOver()) {
+                    pushNew();
+                }
             }
             break;
         case 39:
             event.preventDefault();
             if (moveRight()) {
                 generateOneNumber();
-                // isGameOver();
-                setTimeout("isGameOver()", 300);
+                if(isGameOver()) {
+                    pushNew();
+                }
             }
             break;
         case 40:
             event.preventDefault();
             if (moveDown()) {
                 generateOneNumber();
-                // isGameOver();
-                setTimeout("isGameOver()", 300);
+                if(isGameOver()){
+                    pushNew(); 
+                }
             }
             break;
     }
