@@ -5,7 +5,7 @@ $(function () {
 function newGame() {
     username = mytrim(prompt("Enter you name"));
     // username =prompt("Enter you name");
-    console.log(JSON.parse(storge.getItem('list')))
+    console.log(username)
     if(!myRepeat(JSON.parse(storge.getItem('list')), username)) {
         alert("用户名已经存在");
         newGame();

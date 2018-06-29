@@ -9,7 +9,7 @@ function enSure(str) {
 
 function mytrim(str) {
     if (str) {
-        return str.replace(/(^\s*)|(\s*$)/g, "").length == 0 ? (alert("不允许全部空格"),newGame()) : str;
+        return str.replace(/(^\s*)|(\s*$)/g, "").length == 0 ? (alert("不允许全部空格"),newGame()) : str.replace(/(^\s*)|(\s*$)/g, "");
     } else {
         return (alert("你没有输入内容"),newGame())
     }
